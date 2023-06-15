@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Box } from '@mui/material';
 
-import { ChannelDetail, VideoDetail, SearchFeed, Navbar, Feed } from './components';
+import { ChannelDetail, NotFound, VideoDetail, SearchFeed, Navbar, Feed } from './components';
 
 
 // Render All components and  Define Routes
@@ -14,6 +14,8 @@ const App = () => (
         <Route path='/video/:id' element={<VideoDetail />} />
         <Route path='/channel/:id' element={<ChannelDetail />} />
         <Route path='/search/:searchTerm' element={<SearchFeed />} />
+        <Route path='*' element={<NotFound />} />
+
       </Routes>
     </Box>
   </BrowserRouter>
